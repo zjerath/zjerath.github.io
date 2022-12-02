@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 2rem 0 0 0;
+  transition: .5s ease;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+header{
+  z-index: 99999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(20px);
+  transition: .6s ease;
+}
+
+.top-nav{
+  position: relative;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 110px;
+  transition: .6s ease;
+}
+
+.top-nav li{
+  display: inline-block;
+  font-size: 1em;
+}
+
+.top-nav .Zain{
+  font-size: 1.5em;
+  font-weight: 500;
+  color: black;
+  transition: opacity .15s;
+}
+
+.top-nav .Zain:hover{
+  opacity: 50%;
+}
+
+.menu li{
+  font-weight: 300;
+}
+
+.menu li:not(:last-child){
+  margin-right: 50px;
+}
+
+.menu a{
+  color: black;
+  border-bottom-style: hidden:
+}
+
+.menu a.active{
+  border-bottom: 1px solid;
+}
+
+.menu a::after{
+  display: block;
+  content: '';
+  border-bottom: 1px solid;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu a.active::after{
+  border-bottom: none;
+}
+
+.menu a.active:hover::after{
+  border-bottom: none;
+}
+
+.home{
+  position: relative;
+  max-width: 1250px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 13rem;
+  flex-direction: column;
+}
+
+.home .home-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.home-content .info h2{
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.home-content .info h3{
+  font-size: 1.98em;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.home-content .info h3 .cursor{
+  content: "";
+  height: 100%;
+  width: 100%;
+  margin: 0 2px;
+  border-left: 2px solid black;
+  animation: blink 1s infinite;
+}
+
+.home-content .info h3 .typing{
+  animation: none;
+}
+
+@keyframes blink{
+  0% {border-left: 2px solid black;}
+  0% {border-left: 2px solid black;}
+  0% {border-left: none;}
+  99% {background-color: none;}
+  100% {border-left: 2px solid black;}
+}
+
+.home-content .info .socials{
+  display: flex;
+  flex-direction: row;
+}
+
+.home-content .info .socials button{
+  font-size: 2em;
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.home-content .info .socials a{
+  color: black;
+  transition: opacity .15s;
+}
+
+.home-content .info .socials a:hover{
+  opacity: 50%;
+}
+
+.home-content .info .location p{
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.home-content .info .location p i{
+  margin-right: 10px;
+  color: black;
+}
+
+.home-content .home-img img{
+  width: 400px;
+  height: 400px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio{
+  padding: 60px 0;
+}
+
+.section-title{
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.section-subtitle{
+  text-align: center;
+  display: block;
+  font-size: .875rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.project{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 16px;
+  box-shadow: #0000001a 0 4px 6px -1px, #0000000f 0 2px 4px -1px;
+  overflow: hidden;
+}
+
+.project-content{
+  align-items: center;
+  display: flex;
+  height: 230px;
+  width: 100%
+}
+
+.project-content .project-img{
+  display: block;
+  height: 250px;
+  flex: 40%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 40%;
+}
+
+.project-content .project-img img{
+  display: block;
+  width: auto;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.project-content .project-info{
+  text-align: left;
+  margin: 20px 0;
+  flex: 60%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 60%;
+}
+
+.project-content .project-info h3{
+  display: block;
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.project-content .project-info p{
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.project-content .project-info .project-link{
+  display: block;
+  font-size: 1.25rem;
+  margin: 15px 0;
+}
+
+.project-content .project-info .project-link .nasa{
+  color: #adc9f9;
+}
+
+.project-content .project-info .project-link .player{
+  color: #e6ccff;
+}
+
+.project-content .project-info .project-link a{
+  padding: 4px 8px;
+  transition: opacity .15s;
+}
+
+.project-content .project-info .project-link a:hover{
+  background-color: rgba(220,220,220,.2);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.project-content .project-info .project-link a i{
+  margin-right: 10px;
+}
+
+.about{
+  padding: 60px 0;
+}
+
+.about-content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 250px;
+}
+
+.about-content .about-img{
+  flex: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+}
+
+.about-img img{
+  width: 449px;
+  height: 554px;
+  border-radius: 15px;
+}
+
+.about-content .about-text{
+  flex: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+}
+
+.about-content .about-text .name{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-content .about-text p{
+  margin-top: 5px;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.about-content .about-text .tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.about-content .about-text .tab-link{
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  background-color: #e6e6e6;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.about-content .about-text .tab-link:hover{
+  color: #666666;
+}
+
+.about-content .about-text .tab-link.active-link{
+  background-color: #cccccc;
+  font-weight: 500;
+  transition: 0.5s ease;
+}
+
+.about-content .about-text .tab-link.active-link:hover{
+  color: black;
+}
+
+.about-content .about-text .tab-content ul li{
+  list-style:none;
+  margin: 10px 0;
+}
+
+.about-content .about-text .tab-content ul .infowpic{
+  display: flex;
+  width: 100%;
+}
+
+.about-content .about-text .tab-content ul .infowpic .tab-img{
+  width: 50px;
+  height: 50px;
+}
+
+.about-content .about-text .tab-content ul .infowpic .tab-img img{
+  display: inline-block;
+  width: 50px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about-content .about-text .tab-content ul .infowpic .tab-info{
+  margin: 0 10px;
+}
+
+.about-content .about-text .tab-content ul li span{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about-content .about-text .tab-content{
+  display: none;
+  margin: -20px 0;
+}
+
+.about-content .about-text .tab-content.active-tab{
+  display: block;
+}
+
+.about-content .about-text button{
+  margin-top: 40px;
+  border: none;
+  background-color: #e6e6e6;
+  transition: opacity .15s;
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+
+.about-content .about-text button a{
+  color: black;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.about-content .about-text button a:hover{
+  color: #666666;
+}
+
+footer{
+  background: #262626;
+  padding: 20px 0;
+}
+
+footer .footer-text{
+  text-align: center;
+  font-size: .9em;
+  font-weight: 300;
+  color: #adadad;
+}
+
+footer .footer-socials{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+footer .footer-socials button{
+  font-size: 1.7em;
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+footer .footer-socials a{
+  color: white;
+  transition: opacity .15s;
+}
+
+footer .footer-socials a:hover{
+  opacity: 50%;
+}
