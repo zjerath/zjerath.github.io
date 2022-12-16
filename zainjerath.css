@@ -663,9 +663,7 @@ footer .footer-socials a:hover{
   }
 
   .about-content .about-text .tab-titles{
-    display: flex;
     justify-content: center;
-    margin: 20px 0 40px;
   }
 
   .about-content .about-text .tab-content ul .infowpic{
