@@ -596,9 +596,14 @@ footer .footer-socials a:hover{
     transform: rotate(-135deg);
   }
 
+  .home{
+    max-width: 950px;
+  }
+
   .home-content{
     display: block;
     text-align: center;
+    width: 600px;
   }
 
   .home-content .info .socials{
@@ -663,7 +668,9 @@ footer .footer-socials a:hover{
   }
 
   .about-content .about-text .tab-titles{
+    display: flex;
     justify-content: center;
+    margin: 20px 0 40px;
   }
 
   .about-content .about-text .tab-content ul .infowpic{
