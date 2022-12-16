@@ -35,7 +35,7 @@ header{
 
 .top-nav{
   position: relative;
-  height: 8rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,6 +59,11 @@ header{
 
 .top-nav .Zain:hover{
   opacity: 50%;
+}
+
+.nav-btn{
+  cursor: pointer;
+  display: none;
 }
 
 .menu li{
@@ -110,12 +115,13 @@ header{
   flex-direction: column;
 }
 
-.home .home-content{
+.home-content{
+  padding: 0 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 1020px;
 }
 
 .home-content .info h2{
@@ -309,17 +315,15 @@ header{
 }
 
 .about-content{
+  margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 0 250px;
+  width: 930px;
 }
 
 .about-content .about-img{
   flex: 50%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 50%;
 }
 
 .about-img img{
@@ -330,9 +334,6 @@ header{
 
 .about-content .about-text{
   flex: 50%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 50%;
 }
 
 .about-content .about-text .name{
@@ -469,4 +470,205 @@ footer .footer-socials a{
 
 footer .footer-socials a:hover{
   opacity: 50%;
+}
+
+@media (max-width: 950px){
+  .nav-btn{
+    display: block;
+    z-index: 999;
+  }
+
+  .Zain{
+    color: white;
+  }
+
+  .menu{
+    position: fixed;
+    top: -1600%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .menu.active{
+    top: 0;
+    overflow: hidden;
+  }
+
+  .menu li{
+    display: block;
+  }
+
+  .menu li:not(:last-child){
+    margin-right: 0px;
+  }
+
+  .menu a{
+    display: inline-block;
+    color: white;
+    opacity: 0.3;
+    margin: 20px 0;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: opacity .2s ease;
+  }
+
+  .menu a.active{
+    opacity: 1;
+    border-bottom: none;
+  }
+
+  .menu a:hover{
+    opacity: 1;
+  }
+
+  .menu a::after{
+    border-bottom: none;
+  }
+
+  #nav-icon{
+  width: 20px;
+  height: 15px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  }
+
+  #nav-icon span{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+  #nav-icon span:nth-child(1) {
+    top: 0px;
+  }
+
+  #nav-icon span:nth-child(2) {
+    top: 6px;
+  }
+
+  #nav-icon span:nth-child(3) {
+    top: 12px;
+  }
+
+  #nav-icon.open span:nth-child(1) {
+    top: 6px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  #nav-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -20px;
+  }
+
+  #nav-icon.open span:nth-child(3) {
+    top: 6px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+
+  .home-content{
+    display: block;
+    text-align: center;
+  }
+
+  .home-content .info .socials{
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  .home-content .info h2{
+    font-size: 3.5em;
+    font-weight: 500;
+  }
+
+  .home-content .info h3{
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+
+  .home-content .info .socials button{
+    font-size: 1.8em;
+    margin-right: 18px;
+  }
+
+  .home-content .info .location p{
+    font-size: .8em;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+
+  .home-content .info .location p i{
+    margin-right: 8px;
+  }
+
+  .home-content .home-img img{
+    width: 350px;
+    height: 350px;
+  }
+
+  .project-content .project-info h3{
+    font-size: 2.5rem;
+  }
+
+  .project-content .project-info p{
+    font-size: 1rem;
+  }
+
+  .about-content{
+    display: block;
+    text-align: center;
+    width: 500px;
+  }
+
+  .about-img img{
+    width: 337px;
+    height: 416px;
+    justify-content: center;
+  }
+
+  .about-content .about-text .name{
+    margin-top: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .about-content .about-text .tab-titles{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px;
+  }
+
+  .about-content .about-text .tab-content ul .infowpic{
+    justify-content: center;
+  }
 }
