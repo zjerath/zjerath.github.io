@@ -1,5 +1,6 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
+const bars = document.querySelector(".menu");
 const textArray = ["software developer", "data scientist", "techno optimist"];
 const typingDelay = 200;
 const erasingDelay = 100;
@@ -9,26 +10,36 @@ let charIndex = 0;
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    var elements1 = document.getElementsByClassName("top-nav");
-    for(var i = 0; i < 1; i++){
-      elements1[i].style.backgroundColor = "#262626";
-      elements1[i].style.height = "3rem";
+  if(!bars.classList.contains("active")){
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      var elements1 = document.getElementsByClassName("top-nav");
+      for(var i = 0; i < 1; i++){
+        elements1[i].style.backgroundColor = "#262626";
+        elements1[i].style.height = "3rem";
+      }
+      var menuitems = document.getElementsByClassName("menu-items");
+      for(var i = 0; i < menuitems.length; i++){
+        menuitems[i].style.color = "white";
+      }
+      var navitems = document.getElementsByClassName("nav-icons");
+      for(var i = 0; i < navitems.length; i++){
+        navitems[i].style.background = "white";
+      }
     }
-    var menuitems = document.getElementsByClassName("menu-items");
-    for(var i = 0; i < menuitems.length; i++){
-      menuitems[i].style.color = "white";
-    }
-  }
-  else {
-    var elements2 = document.getElementsByClassName("top-nav");
-    for(var i = 0; i < 1; i++){
-      elements2[i].style.backgroundColor = "white";
-      elements2[i].style.height = "8rem";
-    }
-    var menuitems = document.getElementsByClassName("menu-items");
-    for(var i = 0; i < menuitems.length; i++){
-      menuitems[i].style.color = "black";
+    else{
+      var elements2 = document.getElementsByClassName("top-nav");
+      for(var i = 0; i < 1; i++){
+        elements2[i].style.backgroundColor = "white";
+        elements2[i].style.height = "6rem";
+      }
+      var menuitems = document.getElementsByClassName("menu-items");
+      for(var i = 0; i < menuitems.length; i++){
+        menuitems[i].style.color = "black";
+      }
+      var navitems = document.getElementsByClassName("nav-icons");
+      for(var i = 0; i < navitems.length; i++){
+        navitems[i].style.background = "black";
+      }
     }
   }
 }
@@ -38,7 +49,7 @@ window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset;
   sections.forEach(current => {
     let sectionHeight = current.offsetHeight;
-    let sectionTop = current.offsetTop - 130;
+    let sectionTop = current.offsetTop - 300;
     let id = current.getAttribute("id");
     if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
       document.querySelector(".menu a[href*=" + id + "]").classList.add("active");
@@ -92,4 +103,9 @@ function opentab(tabname){
   }
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
+}
+
+function openClose(){
+  document.getElementById("menu").classList.toggle("active");
+  document.getElementById("nav-icon").classList.toggle("open");
 }
