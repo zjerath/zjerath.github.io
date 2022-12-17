@@ -478,10 +478,6 @@ footer .footer-socials a:hover{
     z-index: 999;
   }
 
-  .Zain{
-    color: white;
-  }
-
   .menu{
     position: fixed;
     top: -1600%;
@@ -594,6 +590,10 @@ footer .footer-socials a:hover{
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
+  }
+
+  .nav-icons{
+    background-color: black;
   }
 
   .home{
