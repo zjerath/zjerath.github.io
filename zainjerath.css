@@ -295,6 +295,10 @@ header{
   color: #18d860;
 }
 
+.project-content .project-info .project-link .sign{
+  color: white;
+}
+
 .project-content .project-info .project-link a{
   padding: 4px 8px;
   transition: opacity .15s;
