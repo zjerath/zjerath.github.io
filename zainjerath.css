@@ -76,7 +76,7 @@ header{
 
 .menu a{
   color: black;
-  border-bottom-style: hidden:
+  border-bottom-style: hidden;
 }
 
 .menu a.active{
@@ -287,16 +287,12 @@ header{
   margin: 15px 0;
 }
 
+.project-content .project-info .project-link .copa{
+  color: white;
+}
+
 .project-content .project-info .project-link .nasa{
   color: #adc9f9;
-}
-
-.project-content .project-info .project-link .player{
-  color: #18d860;
-}
-
-.project-content .project-info .project-link .galaga{
-  color: #a6a6a6;
 }
 
 .project-content .project-info .project-link .sign{
@@ -339,8 +335,8 @@ header{
 }
 
 .about-img img{
-  width: 449px;
-  height: 554px;
+  width: 423px;
+  height: 546px;
   border-radius: 15px;
 }
 
@@ -362,7 +358,7 @@ header{
 
 .about-content .about-text .tab-titles{
   display: flex;
-  margin: 20px 0 40px;
+  margin: 10px 0 40px;
 }
 
 .about-content .about-text .tab-link{
@@ -406,6 +402,10 @@ header{
 }
 
 .about-content .about-text .tab-content ul .infowpic .tab-img img{
+  border-radius: 5px;
+}
+
+.about-content .about-text .tab-content ul .infowpic .tab-img img{
   display: inline-block;
   width: 50px;
   height: auto;
@@ -431,7 +431,7 @@ header{
 }
 
 .about-content .about-text button{
-  margin-top: 40px;
+  margin-top: 30px;
   border: none;
   background-color: #e6e6e6;
   transition: opacity .15s;
@@ -668,8 +668,8 @@ footer .footer-socials a:hover{
   }
 
   .about-img img{
-    width: 337px;
-    height: 416px;
+    width: 317px;
+    height: 410px;
     justify-content: center;
   }
 
