@@ -8,6 +8,7 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
@@ -349,7 +350,7 @@ header{
   font-weight: 600;
 }
 
-.about-content .about-text p{
+.about-content .about-text .description{
   margin-top: 5px;
   display: block;
   font-size: 1rem;
@@ -516,7 +517,6 @@ footer .footer-socials a:hover{
 
   .menu a{
     display: inline-block;
-    color: white;
     opacity: 0.3;
     margin: 20px 0;
     font-size: 3rem;
@@ -687,5 +687,54 @@ footer .footer-socials a:hover{
 
   .about-content .about-text .tab-content ul .infowpic{
     justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .top-nav {
+    padding: 0 50px;
+  }
+
+  .home-content .home-img img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .menu {
+    top: -1950%;
+  }
+  
+  .project-content {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .project-content .project-info .project-link {
+    margin-bottom: 0;
+  }
+
+  .project-content .project-info{
+    text-align: center;
+    margin: 0px 0;
+  }
+
+  .project-content .project-info h3{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .project-content .project-info .project-link a {
+    white-space: nowrap;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 }

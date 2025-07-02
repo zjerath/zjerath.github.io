@@ -44,6 +44,11 @@ function scrollFunction() {
   }
 }
 
+function openClose(){
+  document.getElementById("menu").classList.toggle("active");
+  document.getElementById("nav-icon").classList.toggle("open");
+}
+
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const scrollY = window.pageYOffset;
@@ -103,9 +108,4 @@ function opentab(tabname){
   }
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
-}
-
-function openClose(){
-  document.getElementById("menu").classList.toggle("active");
-  document.getElementById("nav-icon").classList.toggle("open");
 }
