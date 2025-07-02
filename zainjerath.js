@@ -47,6 +47,7 @@ function scrollFunction() {
 function openClose(){
   document.getElementById("menu").classList.toggle("active");
   document.getElementById("nav-icon").classList.toggle("open");
+  document.body.classList.toggle("no-scroll", document.getElementById("menu").classList.contains("active"));
 }
 
 window.addEventListener("scroll", () => {
@@ -109,3 +110,22 @@ function opentab(tabname){
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+  setTimeout(type, newTextDelay + 250);
+
+  // Close menu on menu item click (for mobile)
+  var menuLinks = document.querySelectorAll(".menu-items");
+  var menu = document.getElementById("menu");
+  var navIcon = document.getElementById("nav-icon");
+  menuLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+      // Only close if menu is open (active)
+      if(menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        navIcon.classList.remove("open");
+        document.body.classList.remove("no-scroll");
+      }
+    });
+  });
+});

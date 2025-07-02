@@ -307,6 +307,7 @@ header{
 .project-content .project-info .project-link a{
   padding: 4px 8px;
   transition: opacity .15s;
+  white-space: nowrap;
 }
 
 .project-content .project-info .project-link a:hover{
@@ -317,6 +318,33 @@ header{
 
 .project-content .project-info .project-link a i{
   margin-right: 10px;
+}
+
+.more-wrapper{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.more-projects{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: gray;
+  text-decoration: none;
+  transition: opacity .15s;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all .15s;
+}
+
+.more-projects:hover{
+  background-color: #f0f2f4;
+  color: black;
 }
 
 .about{
